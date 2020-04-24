@@ -12,6 +12,7 @@ import CoreData
 extension BrunchSpot {
     
     // optionality from data model inspector is overriden by these paramsB
+    @discardableResult
     convenience init(name: String, tier: String = "Unrated", summary: String = "No summary added", context: NSManagedObjectContext = CoreDataStack.context) {
         self.init(context: context)
         self.name = name
